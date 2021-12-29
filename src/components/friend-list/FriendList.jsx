@@ -1,11 +1,13 @@
 import friends from './friends.json';
 import FriendList  from './FriendListItem'
+import { ContainerFriends } from './Friends.styled'
+
 
 export default function FriendListComponent() {
     return (
-        <div>
+        <ContainerFriends>
             <FriendList  friends={friends} />
-        </div>
+        </ContainerFriends>
         
     )
 }

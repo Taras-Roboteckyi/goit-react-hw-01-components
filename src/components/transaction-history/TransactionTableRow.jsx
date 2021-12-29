@@ -1,25 +1,32 @@
 import PropTypes from 'prop-types';
+import {
+  TransactionHead,
+  TransactionRow,
+  TransactionItem,
+  TransactionHeadItem,
+TableHeaderStyle} from './Transaction.styled'
+
 
 export default function TransactionHistory (props) {
      
   return (
-  <table class="transaction-history">
+  <TransactionHead>
     <TableHeader />
       <TableBody items={props.items}/>
-      </table>
+      </TransactionHead>
   )  
 }
 
  function TableHeader() {
     
    return (
-     <thead>
-    <tr>
-      <th>Type</th>
-      <th>Amount</th>
-      <th>Currency</th>
-    </tr>
-  </thead>
+     <TableHeaderStyle>
+    <TransactionRow>
+      <TransactionHeadItem>Type</TransactionHeadItem>
+      <TransactionHeadItem>Amount</TransactionHeadItem>
+      <TransactionHeadItem>Currency</TransactionHeadItem>
+    </TransactionRow>
+  </TableHeaderStyle>
    )  
 }
 
@@ -39,11 +46,11 @@ function TableRow(props) {
     const {type, amount, currency} = props.row
   
   return (
-     <tr>
-      <td>{type}</td>
-      <td>{amount}</td>
-      <td>{currency}</td>
-    </tr>
+     <TransactionRow>
+      <TransactionItem>{type}</TransactionItem>
+      <TransactionItem>{amount}</TransactionItem>
+      <TransactionItem>{currency}</TransactionItem>
+    </TransactionRow>
     
   )
     

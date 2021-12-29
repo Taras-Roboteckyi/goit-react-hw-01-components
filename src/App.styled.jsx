@@ -2,6 +2,9 @@ import createGlobalStyle from 'styled-components';
 
 export const Container = createGlobalStyle.div`
   /*-----Скидування стилів------*/
+html {
+  box-sizing: border-box;
+}
 
 a {
   text-decoration: none;
@@ -23,7 +26,7 @@ ol {
   list-style: none;
   margin-top: 0;
   margin-bottom: 0;
-  padding-left: 0;
+  
 }
 
 img {
@@ -38,4 +41,8 @@ body {
   padding-right: 15px;
   
 }
+
+display: flex;
+flex-direction: column;
+align-items: center;
 `

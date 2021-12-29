@@ -1,11 +1,13 @@
 import transactions from './transactions.json';
 import TransactionHistory from './TransactionTableRow';
+import { ContainerTransaction } from './Transaction.styled'
+
 
 export default function TransactionApp() {
     return (
-        <div>
+        <ContainerTransaction>
         <TransactionHistory items={transactions} />
-        </div>
+        </ContainerTransaction>
        
     )
 }

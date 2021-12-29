@@ -5,7 +5,7 @@ import Profile from './Profilemarkup'
 
 export default function ProfileApp() {
     return (
-      <div>
+      <>
           <Profile
          username={user.username}
          tag={user.tag}
@@ -15,6 +15,6 @@ export default function ProfileApp() {
           views={user.stats.views}
           likes={user.stats.likes}
          />
-         </div>
+         </>
     )
 }

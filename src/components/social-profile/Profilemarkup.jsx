@@ -1,19 +1,23 @@
 import PropTypes from 'prop-types';
+import {
+  ContainerProfile,
+  Description,
+  Avatar
+} from './Profile.styled';
 
 const Profilemarkup = (props) => {
   const {username, tag, location, avatar, followers, views, likes} = props
     return (
-     <div class="profile">
-        <div class="description">
-        <img
+     <ContainerProfile >
+        <Description>
+        <Avatar
       src={avatar}
       alt="User avatar"
-      class="avatar"
     />
     <p class="name">{username}</p>
     <p class="tag">{tag}</p>
     <p class="location">{location}</p>
-  </div>
+  </Description>
 
   <ul class="stats">
     <li>
@@ -29,7 +33,7 @@ const Profilemarkup = (props) => {
       <span class="quantity">{likes}</span>
     </li>
   </ul>
-</div>
+</ContainerProfile>
     )
 }
 

@@ -20,7 +20,7 @@ const FriendListItem = (props) => {
     return ( 
    
             <li class="item">
-            <span class="status">{friend.isOnline}</span>
+            <span class="status">{friend.isOnline? "Online" : "Offline"}</span>
             <img class="avatar" src={friend.avatar} alt="User avatar" width="48" />
             <p class="name">{friend.name}</p>
             </li >

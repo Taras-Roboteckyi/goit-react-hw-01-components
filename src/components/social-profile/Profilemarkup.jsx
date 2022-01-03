@@ -9,7 +9,7 @@ import {
   Label
 } from './Profile.styled';
 
-const Profilemarkup = (props) => {
+const Profile = (props) => {
   const {username, tag, location, avatar, followers, views, likes} = props
     return (
      <ContainerProfile >
@@ -41,9 +41,9 @@ const Profilemarkup = (props) => {
     )
 }
 
-export default Profilemarkup
+export default Profile
 
-Profilemarkup.propTypes = {
+Profile.propTypes = {
   username: PropTypes.string.isRequired,
   tag: PropTypes.string.isRequired,
   location: PropTypes.string.isRequired,

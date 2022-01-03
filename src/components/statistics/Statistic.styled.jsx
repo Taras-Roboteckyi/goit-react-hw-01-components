@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import getRandomHexColor from '../../utilities/GetRandomHexColor'
 
 export const ContainerStatistic = styled.section`
  
@@ -32,6 +33,3 @@ export const Item = styled.li`
     background-color: ${props => getRandomHexColor()};
 `
 
-function getRandomHexColor() {
-  return `#${Math.floor(Math.random() * 16777215).toString(16)}`;
-}

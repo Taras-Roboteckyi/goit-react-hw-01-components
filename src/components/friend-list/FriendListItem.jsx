@@ -11,10 +11,10 @@ export default function FriendList(props) {
 
       return (
     <FriendListStyle>
-       {friends.map(friend => (
-           
-           <FriendListItem key={friend.id} friend={friend} />
-       ))}
+          {friends.map(({isOnline, avatar, name,id})=> {
+           // console.log(friend);
+            return <FriendListItem key={id} friend={{ isOnline, avatar, name }} />
+          })}
     </FriendListStyle>
 )
     
@@ -22,13 +22,13 @@ export default function FriendList(props) {
 
 
 const FriendListItem = (props) => {
-    const friend = props.friend
+    const {isOnline, avatar, name} = props.friend
     return ( 
    
             <Item>
-            <Status>{friend.isOnline}</Status>
-            <Avatar src={friend.avatar} alt="User avatar" width="48" />
-            <Name>{friend.name}</Name>
+            <Status>{isOnline}</Status>
+            <Avatar src={avatar} alt="User avatar" width="48" />
+            <Name>{name}</Name>
             </Item >
         
     )

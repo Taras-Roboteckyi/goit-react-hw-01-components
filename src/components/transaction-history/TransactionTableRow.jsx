@@ -7,12 +7,12 @@ import {
 TableHeaderStyle} from './Transaction.styled'
 
 
-export default function TransactionHistory (props) {
+export default function TransactionHistory ({items}) {
      
   return (
   <TransactionHead>
     <TableHeader />
-      <TableBody items={props.items}/>
+      <TableBody items={items}/>
       </TransactionHead>
   )  
 }
@@ -34,8 +34,8 @@ function TableBody(props) {
     //console.log(props)
   return (
     <tbody>
-      {props.items.map(item => (
-            <TableRow key={item.id} row={item}/>
+      {props.items.map(({id, type, amount, currency}) => (
+        <TableRow key={id} row={{ type, amount, currency }}/>
       ))}
       
     </tbody>)

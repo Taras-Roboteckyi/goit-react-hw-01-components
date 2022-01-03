@@ -14,10 +14,10 @@ const StatisticList = (props) => {
        
        <StatisList>
     
-          {stats.map(stat => (
-      <Item key={stat.id} >
-        <span>{stat.label}</span>
-        <span>{stat.percentage}</span>
+          {stats.map(({id,label, percentage}) => (
+      <Item key={id} >
+        <span>{label}</span>
+        <span>{percentage}</span>
       </Item>
     ))}
       </StatisList>
